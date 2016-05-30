@@ -31,8 +31,9 @@
 					<tr>
 						<td align="center">${post.user.username}</td>
 						<td align="center">${post.plate.platename}</td>
-						<td align="center">${post.postdate}</td>
-						<td align="center"><a href="comment_postDetailComment.action?postid=${post.id}">${post.title}</a></td>
+						<td align="center" width="200">${post.postdate}</td>
+						<td align="center" width="250"><a
+							href="comment_postDetailComment.action?postid=${post.id}">${post.title}</a></td>
 						<c:if
 							test="${user.id==post.user.id||user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">
 							<td align="center"><a href="post_deletePost.action?postid=${post.id}">删除</a></td>
@@ -52,9 +53,7 @@
 				<input type="submit" value="新增帖子" />
 			</c:if>
 			<c:if test="${sessionScope.user.rank==1}">
-				<div class="centers">
 					<a href="admin_PgetUserList.action">设置版主</a>
-				</div>
 			</c:if>
 		</form>
 		<a href="MainAction.action">返回首页</a>
