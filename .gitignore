@@ -1,0 +1,6 @@
+*.class
+*.jar
+*.ear
+*.war
+hs_err_pid*
+/WebRoot/WEB-INF/classes/

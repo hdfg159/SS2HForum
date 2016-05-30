@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="lcomment">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="回复帖子内容不能为空" />
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">500</param>
+			<message key="内容信息不能太长" />
+		</field-validator>
+	</field>
+</validators>

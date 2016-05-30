@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="bbs_*" class="action.LoginAction" method="{1}">
+			<result name="success" type="redirectAction">
+				<param name="namespace">/user</param>
+				<param name="actionName">MainAction</param>
+			</result>
+			<result name="input">/{1}.jsp</result>
+			<result name="registersuccess">/login.jsp</result>
+		</action>
+	</package>
+	<package name="user" extends="struts-default" namespace="/user">
+		<interceptors>
+			<interceptor name="access" class="interceptor.LoginInterceptor" />
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="access" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myStack" />
+		<global-results>
+			<result name="login" type="redirect">../login.jsp</result>
+		</global-results>
+		<action name="MainAction" class="action.MainAction">
+			<result name="success" type="redirect">UserMain.jsp</result>
+			<result name="input" type="redirect">../login.jsp</result>
+		</action>
+		<action name="personal_*" class="action.PersonalAction" method="{1}">
+			<result name="deletepostsuccess" type="redirect">PersonalPosts.jsp
+			</result>
+			<result name="deletecommentsuccess" type="redirect">PersonalComments.jsp
+			</result>
+			<result name="updateinformationsuccess" type="redirect">PersonalInformation.jsp
+			</result>
+			<result name="modfail" type="redirect">BasicInformation.jsp
+			</result>
+			<result name="input">BasicInformation.jsp</result>
+		</action>
+		<action name="post_*" class="action.PostsAction" method="{1}">
+			<result name="displaypostssuccess" type="redirect">DisplayPosts.jsp
+			</result>
+			<result name="input">AddPosts.jsp</result>
+		</action>
+		<action name="plate_*" class="action.PlateAction" method="{1}">
+			<result name="success" type="redirectAction">MainAction</result>
+			<result name="entersuccess" type="redirect">ModPlateInfo.jsp</result>
+			<result name="input">AddPlate.jsp</result>
+		</action>
+		<action name="comment_*" class="action.CommentAction" method="{1}">
+			<result name="success" type="redirect">PostDetails.jsp</result>
+			<result name="input">PostDetails.jsp</result>
+		</action>
+		<action name="admin_*" class="action.AdminAction" method="{1}">
+			<result name="addsuccess" type="redirect">userinfolist.jsp</result>
+			<result name="setplateadminsuccess" type="redirect">PlateAdminuserinfolist.jsp
+			</result>
+			<result name="input">AddUser.jsp</result>
+		</action>
+	</package>
+</struts>

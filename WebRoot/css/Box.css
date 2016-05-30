@@ -1,0 +1,153 @@
+#wrap {
+    width: 100%;
+    margin-top: 85px;
+}
+
+#banner {
+    width: 100%;
+}
+
+#banner .nav_box {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: rgb(45, 159, 219);
+}
+
+#banner .nav_box .nav_uls {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+#banner .nav_box .nav_uls img {
+    max-width: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+#banner .nav_box .nav_bg {
+    height: 43px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    bottom: 0px;
+    left: 0;
+    background: #000000;
+}
+
+#wrap_boxs {
+    width: 100%;
+    background: #f7f7f7;
+    padding-bottom: 15px;
+}
+
+#wrap_boxs .box1 {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#wrap_boxs .content_box {
+    clear: both;
+    /*清除产生css浮动*/
+    width: 1200px;
+    overflow: hidden;
+    margin: 15px auto 0px;
+    padding: 72px 45px 70px;
+}
+
+#wrap_boxs .content_box .left {
+    float: left;
+    width: 420px;
+    text-align: center;
+    position: relative;
+}
+
+#wrap_boxs .content_box .left .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#wrap_boxs .content_box .left .bg img {
+    width: auto;
+    max-width: 358px;
+    height: 424px;
+}
+
+#wrap_boxs .content_box .right {
+    float: right;
+    width: 634px;
+}
+
+#wrap_boxs .content_box .right h1,
+#wrap_boxs .content_box .right1 h1 {
+    font-size: 36px;
+    color: #3d3d3f;
+}
+
+#wrap_boxs .content_box .right a,
+#wrap_boxs .content_box .right1 a {
+    margin-top: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+#wrap_boxs .content_box .right a:hover,
+#wrap_boxs .content_box .right1 a:hover {
+    font-size: 24px;
+    color: #3CB1E7;
+    text-decoration: none;
+}
+
+#wrap_boxs .content_box .right p,
+#wrap_boxs .content_box .right1 p {
+    margin-top: 5px;
+}
+
+#wrap_boxs .content_box .right1 {
+    float: left;
+    width: 635px;
+}
+
+#wrap_boxs .content_box .left1 {
+    float: right;
+    text-align: center;
+    position: relative;
+}
+
+.btnzc {
+    margin-top: 20px;
+}
+
+.wrap .foot {
+    width: 100%;
+    height: 40px;
+    margin-top: 95px;
+    padding-top: 40px;
+    background: #38B3E8;
+    background-size: 100% 100%;
+}
+
+.footcontent {
+    width: 200px;
+    height: 20px;
+    margin: auto auto;
+}
+
+.footcontent p {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
