@@ -69,9 +69,9 @@ public class PostService implements IPostService {
 	@Override
 	public List<Posts> findPlateInAll(int plateid) {
 		@SuppressWarnings("unchecked")
-		List<Posts> posts = (List<Posts>) baseDao.find(
-				"from Posts p where p.plate.id=?", plateid);
-		// PostsUtil.sortpost(posts, "position");
+		List<Posts> posts = (List<Posts>) baseDao
+				.find("from Posts p where p.plate.id=? order by p.position desc,p.postdate desc",
+						plateid);
 		return posts;
 	}
 

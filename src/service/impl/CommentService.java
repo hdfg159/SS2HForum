@@ -34,7 +34,8 @@ public class CommentService implements ICommentService {
 	@Override
 	public List<Comments> findPostInAll(int postid) {
 		return (List<Comments>) baseDao.find(
-				"from Comments c where c.post.id=?", postid);
+				"from Comments c where c.post.id=? order by c.date desc",
+				postid);
 	}
 
 }

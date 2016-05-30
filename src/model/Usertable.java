@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
@@ -142,6 +143,7 @@ public class Usertable implements java.io.Serializable {
 	}
 
 	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	@OrderBy(value = "postdate")
 	@Cascade(value = { CascadeType.REMOVE })
 	public Set<Posts> getUserPosts() {
 		return userPosts;
@@ -152,6 +154,7 @@ public class Usertable implements java.io.Serializable {
 	}
 
 	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	@OrderBy(value = "date")
 	@Cascade(value = { CascadeType.REMOVE })
 	public Set<Comments> getUserComments() {
 		return userComments;

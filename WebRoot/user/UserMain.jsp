@@ -24,13 +24,10 @@
 				<c:forEach var="plate" items="${sessionScope.PlateList }">
 					<tr>
 						<td align="center">${plate.id}</td>
-						<td align="center"><a
-							href="post_displayPosts?plateid=${plate.id}">${plate.platename}</a></td>
+						<td align="center"><a href="post_displayPosts?plateid=${plate.id}">${plate.platename}</a></td>
 						<c:if test="${sessionScope.user.rank==1}">
-							<td align="center"><a
-								href="plate_deletePlate?plateid=${plate.id}">删除</a></td>
-							<td align="center"><a
-								href="plate_entermodinfo.action?plateid=${plate.id}">修改</a></td>
+							<td align="center"><a href="plate_deletePlate?plateid=${plate.id}">删除</a></td>
+							<td align="center"><a href="plate_entermodinfo.action?plateid=${plate.id}">修改</a></td>
 						</c:if>
 					</tr>
 				</c:forEach>
@@ -41,8 +38,7 @@
 			</c:if>
 		</form>
 		<form action="SearchAction" method="post">
-			<input type="text" name="search" placeholder="输入关键字搜索标题或帖子内容" /> <input
-				type="submit" value="搜索" size="100" />
+			<input type="text" name="search" /> <input type="submit" value="搜索帖子标题/内容" size="100" />
 		</form>
 		<s:fielderror></s:fielderror>
 	</center>
