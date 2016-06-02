@@ -41,7 +41,7 @@ public class SearchAction extends ActionSupport {
 	@Validations(requiredStrings = { @RequiredStringValidator(fieldName = "search", message = "搜索内容不能为空", trim = true, type = ValidatorType.FIELD) })
 	@Action(value = "SearchAction", results = {
 			@Result(name = "success", location = "/user/SearchPost.jsp", type = "redirect"),
-			@Result(name = "input", location = "/user/UserMain.jsp") })
+			@Result(name = "input", location = "/user/Searchpt.jsp") })
 	@Override
 	public String execute() throws Exception {
 		List<Posts> posts = postService.keySearch(search);

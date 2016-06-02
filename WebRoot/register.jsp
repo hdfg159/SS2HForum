@@ -2,37 +2,65 @@
 <%@taglib prefix="s" uri="/struts-tags"%>
 <html>
 <head>
-<link rel="stylesheet" href="css/login.css">
 <title>简易论坛-注册</title>
 </head>
-<body class="body">
-	<div class="logins" style="margin-left: -461.5px; margin-top: -227px;">
-		<h2>欢迎注册简易论坛</h2>
-		<div class="form_box">
-			<form action="${pageContext.request.contextPath}/bbs_register"
+<body>
+	<%@include file="LoginRegisterHead.jsp"%>
+	<div class="container">
+		<br> <br>
+		<div class="row center">
+			<i class="medium material-icons prefix">forum</i>
+			<h5 class="header col s12 light">论坛注册</h5>
+		</div>
+		<br>
+		<div class="row">
+			<form class="col s12" action="${pageContext.request.contextPath}/bbs_register"
 				method="post">
-				<div class="content">
-					<ul>
-						<li><input placeholder="请输入需要注册的用户名" type="text"
-							name="username"> <span>占用位置</span></li>
-						<li><input placeholder="请输入密码" type="password" name="pwd">
-							<span> 占用位置 </span></li>
-					</ul>
-				</div>
-				<div class="wangjimima">
-					<div class="left">
-						<s:fielderror />
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="large material-icons prefix">person_pin</i> <input id="username"
+							name="username" type="text" class="validate"> <label for="username">请输入用户名</label>
 					</div>
-					<span style="width: 450px; float: left; text-indent: 1px;">
-					</span> <a href="bbs_login.action?username=anonymous&pwd=anonymous">不想注册了?以游客身份登录论坛</a>
 				</div>
-				<div class="btndenglu">
-					<input value="注册" type="submit"> <input value="重置"
-						type="reset">
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="large material-icons prefix">vpn_key</i> <input id="password"
+							type="password" name="pwd" class="validate"> <label for="password">请输入密码</label>
+					</div>
+				</div>
+				<br>
+				<div class="row center">
+					<h8 class="header col s12 orange darken-4 white-text"> <s:fielderror></s:fielderror></h8>
+				</div>
+				<br>
+				<div class="row center">
+					<div class="col s12 m4 l2">
+						<button class="btn waves-effect light-blue lighten-1 btn-large" type="submit"
+							name="action">
+							确定 <i class="material-icons right">send</i>
+						</button>
+					</div>
+					<div class="col s12 m4 l8">
+						<a class="waves-effect light-blue lighten-1 btn-large"
+							href="bbs_login.action?username=anonymous&pwd=anonymous">以游客身份登录<i
+							class="material-icons right">perm_identity</i></a>
+					</div>
+					<div class="col s12 m4 l2">
+						<button class="btn waves-effect light-blue lighten-1 btn-large" type="reset"
+							name="action">
+							重置 <i class="material-icons right">clear_all</i>
+						</button>
+					</div>
 				</div>
 			</form>
 		</div>
 	</div>
-	<div class="di_yun"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<%@include file="LoginRegisterTail.jsp"%>
 </body>
 </html>

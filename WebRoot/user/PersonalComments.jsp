@@ -1,35 +1,43 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>个人回帖管理</title>
-<link rel="stylesheet" href="../css/yi.css">
+<title>${user.username}回帖管理</title>
 </head>
-<body class="body">
-	<center>
-		<form action="" method="post">
-			<table
-				style="margin-right:auto;margin-left:auto;background: #FFF none repeat scroll 0% 0%;border-radius: 10px;
-        border: 2px solid #63A4BA;">
-				<caption>个人回帖管理</caption>
-				<tr>
-					<th>回帖时间</th>
-					<th>回帖标题</th>
-					<th>回帖操作</th>
-				</tr>
-				<c:forEach var="comment" items="${modcomments}">
-					<tr>
-						<td>${comment.date}</td>
-						<td>${comment.content}</td>
-						<td><a
-							href="personal_deleteComment.action?commentid=${comment.id}">删除</a></td>
-					</tr>
-				</c:forEach>
-			</table>
-		</form>
-		<a href="PersonalInformation.jsp">返回用户信息管理</a>
-	</center>
-	<div class="di_yun"></div>
+<body>
+	<%@include file="PostPlateHead.jsp"%>
+	<br>
+	<br>
+	<div class="container">
+		<div class="card-panel center card-panel hoverable">
+			<span class="black-text flow-text">${user.username}回帖列表</span>
+		</div>
+		<div class="row">
+			<c:forEach var="comment" items="${modcomments}">
+				<div class="col s6">
+					<div class="card-panel hoverable">
+						<div class="left">${comment.user.username}</div>
+						<div class="right">${comment.date}</div>
+						<br>
+						<div class="divider"></div>
+						<br><div style="word-wrap: break-word;">${comment.content}</div><br>
+						<div class="right">
+							<a class="waves-effect  orange darken-4 btn"
+								href="personal_deleteComment.action?commentid=${comment.id}"><i
+								class="material-icons right">delete</i>删除</a>
+						</div>
+					</div>
+				</div>
+				
+			</c:forEach>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<%@include file="../LoginRegisterTail.jsp"%>
 </body>
 </html>

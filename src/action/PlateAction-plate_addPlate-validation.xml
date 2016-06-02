@@ -6,7 +6,7 @@
 	<field name="platetype">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message key="板块名字不能为空" />
+			<message key="版块名字不能为空" />
 		</field-validator>
 	</field>
 </validators>

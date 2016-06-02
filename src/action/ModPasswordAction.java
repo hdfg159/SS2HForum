@@ -39,7 +39,7 @@ public class ModPasswordAction extends ActionSupport {
 
 	@Validations(requiredStrings = { @RequiredStringValidator(fieldName = "password", message = "密码不能为空", trim = true, type = ValidatorType.FIELD) }, stringLengthFields = { @StringLengthFieldValidator(fieldName = "password", message = "长度只能为1-50位", minLength = "1", maxLength = "50", type = ValidatorType.FIELD) })
 	@Action(value = "ModPasswordAction", results = {
-			@Result(name = "success", location = "/index.jsp", type = "redirect"),
+			@Result(name = "success", location = "/login.jsp", type = "redirect"),
 			@Result(name = "input", location = "/user/ModPassword.jsp") })
 	@Override
 	public String execute() throws Exception {
