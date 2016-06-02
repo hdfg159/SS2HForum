@@ -1,6 +1,5 @@
 <%@ page language="java" import="java.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <html>
 <head>
@@ -16,7 +15,9 @@
 				<blockquote class="flow-text" style="word-wrap: break-word;">${PostDetail.title}</blockquote>
 				<blockquote>${PostDetail.postdate}</blockquote>
 				<div class="col s12">
-					<div class="card-panel hoverable flow-text" style="word-wrap: break-word;">${PostDetail.content}</div>
+					<div class="card-panel hoverable flow-text" style="word-wrap: break-word;">
+						<div style="white-space: pre-wrap">${PostDetail.content}</div>
+					</div>
 				</div>
 			</div>
 			<c:if test="${nowppppp!=NULL}">
@@ -67,7 +68,9 @@
 						<br>
 						<div class="divider"></div>
 						<br>
-						<div style="word-wrap: break-word;">${comment.content}</div>
+						<div style="word-wrap: break-word;">
+							<div style="white-space: pre-wrap">${comment.content}</div>
+						</div>
 						<br>
 						<c:if
 							test="${user.id==comment.user.id||user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">

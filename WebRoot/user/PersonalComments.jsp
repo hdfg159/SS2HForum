@@ -20,7 +20,7 @@
 						<div class="right">${comment.date}</div>
 						<br>
 						<div class="divider"></div>
-						<br><div style="word-wrap: break-word;">${comment.content}</div><br>
+						<br><div style="word-wrap: break-word;white-space: pre-wrap;">">${comment.content}</div><br>
 						<div class="right">
 							<a class="waves-effect  orange darken-4 btn"
 								href="personal_deleteComment.action?commentid=${comment.id}"><i
