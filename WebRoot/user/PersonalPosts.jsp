@@ -2,15 +2,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>个人帖子管理</title>
+<title>${user.username}个人帖子管理</title>
 </head>
 <body>
 	<%@include file="PostPlateHead.jsp"%>
 	<br>
 	<br>
 	<div class="container">
-		<div class="card-panel center card-panel hoverable">
-			<span class="black-text flow-text">帖子列表</span>
+		<div class="center hoverable">
+			<blockquote class="flow-text card-panel">${user.username}帖子列表</blockquote>
 		</div>
 		<div class="row">
 			<c:forEach var="post" items="${modposts}">

@@ -12,13 +12,18 @@
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
-				<blockquote class="flow-text" style="word-wrap: break-word;">${PostDetail.title}</blockquote>
+				Title:
+				<blockquote style="word-wrap: break-word;">${PostDetail.title}</blockquote>
+				<div class="divider"></div>
+				User:
+				<blockquote>${PostDetail.user.username}</blockquote>
+				<div class="divider"></div>
+				Date:
 				<blockquote>${PostDetail.postdate}</blockquote>
-				<div class="col s12">
-					<div class="card-panel hoverable flow-text" style="word-wrap: break-word;">
-						<div style="white-space: pre-wrap">${PostDetail.content}</div>
-					</div>
-				</div>
+				<div class="divider"></div>
+				Content:
+				<blockquote style="word-wrap: break-word;white-space: pre-wrap">${PostDetail.content}</blockquote>
+				<div class="divider"></div>
 			</div>
 			<c:if test="${nowppppp!=NULL}">
 				<c:if test="${user.username ne 'anonymous'}">
@@ -31,22 +36,22 @@
 									<textarea id="icon_prefix2" class="materialize-textarea" name="lcomment"></textarea>
 									<label for="icon_prefix2">请输入回帖内容</label>
 								</div>
-								<div class="col s12">
-									<blockquote class="flow-text">
-										<s:fielderror>
-										</s:fielderror>
-									</blockquote>
-								</div>
+							</div>
+							<div class="col s12">
+								<blockquote>
+									<s:fielderror>
+									</s:fielderror>
+								</blockquote>
 							</div>
 							<div class="input-field col s6 center ">
-								<button class="btn-large waves-effect waves-light light-blue lighten-1"
-									type="submit" name="action">
+								<button class="btn waves-effect waves-light light-blue lighten-1" type="submit"
+									name="action">
 									回复 <i class="material-icons right">send</i>
 								</button>
 							</div>
 							<div class="input-field col s6 center ">
 								<a href="post_displayPosts.action?plateid=${nowppppp}"
-									class="btn-large waves-effect waves-light light-blue lighten-1"><i
+									class="btn waves-effect waves-light light-blue lighten-1"><i
 									class="material-icons right">settings_backup_restore</i>返回</a>
 							</div>
 						</form>
@@ -56,7 +61,7 @@
 			<c:if test="${nowppppp!=NULL&&user.username eq 'anonymous'}">
 				<div class="input-field col s12 center ">
 					<a href="post_displayPosts.action?plateid=${nowppppp}"
-						class="btn-large waves-effect waves-light light-blue lighten-1"><i
+						class="btn waves-effect waves-light light-blue lighten-1"><i
 						class="material-icons right">settings_backup_restore</i>返回</a>
 				</div>
 			</c:if>
@@ -81,7 +86,6 @@
 							</div>
 						</c:if>
 					</div>
-					<br>
 					<br>
 				</c:forEach>
 			</div>

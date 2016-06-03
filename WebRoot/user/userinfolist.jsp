@@ -9,8 +9,8 @@
 	<br>
 	<br>
 	<div class="container">
-		<div class="card-panel center card-panel hoverable">
-			<span class="black-text flow-text">用户信息列表</span>
+		<div class="center hoverable">
+			<blockquote class="flow-text card-panel">所有用户信息</blockquote>
 		</div>
 		<div class="row">
 			<c:forEach var="user2" items="${userlist}">
@@ -35,11 +35,11 @@
 					</div>
 				</div>
 			</c:forEach>
-		</div>
-		<div class="col s12 center">
-			<a class="waves-effect light-blue lighten-1 btn-large" href="AddUser.jsp"> <i
-				class="material-icons right">playlist_add</i>添加用户
-			</a>
+			<div class="col s12 center">
+				<a class="waves-effect light-blue lighten-1 btn-large" href="AddUser.jsp"> <i
+					class="material-icons right">playlist_add</i>添加用户
+				</a>
+			</div>
 		</div>
 	</div>
 	<br>

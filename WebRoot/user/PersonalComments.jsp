@@ -9,8 +9,8 @@
 	<br>
 	<br>
 	<div class="container">
-		<div class="card-panel center card-panel hoverable">
-			<span class="black-text flow-text">${user.username}回帖列表</span>
+		<div class="center hoverable">
+			<blockquote class="flow-text card-panel">${user.username}回帖列表</blockquote>
 		</div>
 		<div class="row">
 			<c:forEach var="comment" items="${modcomments}">
@@ -20,7 +20,9 @@
 						<div class="right">${comment.date}</div>
 						<br>
 						<div class="divider"></div>
-						<br><div style="word-wrap: break-word;white-space: pre-wrap;">">${comment.content}</div><br>
+						<br>
+						<div style="word-wrap: break-word;white-space: pre-wrap;">">${comment.content}</div>
+						<br>
 						<div class="right">
 							<a class="waves-effect  orange darken-4 btn"
 								href="personal_deleteComment.action?commentid=${comment.id}"><i
@@ -28,7 +30,6 @@
 						</div>
 					</div>
 				</div>
-				
 			</c:forEach>
 		</div>
 	</div>

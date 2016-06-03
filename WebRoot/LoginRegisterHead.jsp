@@ -9,15 +9,16 @@
 <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body>
-<script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">简易论坛</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="login.jsp">登录</a></li>
-                <li><a href="register.jsp">注册</a></li>
-            </ul>
-        </div>
-    </nav>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+			<a id="logo-container" href="#" class="brand-logo">SimpleForum</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="login.jsp">登录</a></li>
+				<li><a href="register.jsp">注册</a></li>
+			</ul>
+		</div>
+	</nav>
 </body>
 </html>

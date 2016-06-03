@@ -9,8 +9,8 @@
 	<br>
 	<br>
 	<div class="container">
-		<div class="card-panel center card-panel hoverable">
-			<span class="black-text flow-text">帖子列表</span>
+		<div class="center hoverable">
+			<blockquote class="flow-text card-panel">帖子列表</blockquote>
 		</div>
 		<div class="row">
 			<c:forEach var="post" items="${displaypost}">
@@ -20,7 +20,7 @@
 							<span class="card-title truncate"><a
 								href="comment_postDetailComment.action?postid=${post.id}"><c:if
 										test="${post.position==1}">
-										<i class="material-icons left">present_to_all</i>
+										<i class="material-icons">present_to_all</i>
 									</c:if>${post.title}</a></span>
 							<p>用户：${post.user.username}</p>
 							<p>时间：${post.postdate}</p>
@@ -41,22 +41,34 @@
 			</c:forEach>
 		</div>
 		<c:if test="${user.rank!=1&&user.username ne 'anonymous'}">
-			<div class="col s12 center">
-				<a class="waves-effect light-blue lighten-1 btn-large" href="AddPosts.jsp"> <i
-					class="material-icons right">playlist_add</i>发表帖子
-				</a>
-			</div>
-		</c:if>
-		<c:if test="${user.rank==1}">
 			<div class="row">
-				<div class="col s12 m6">
+				<div class="col s6 center">
 					<a class="waves-effect light-blue lighten-1 btn-large" href="AddPosts.jsp"> <i
 						class="material-icons right">playlist_add</i>发表帖子
 					</a>
 				</div>
-				<div class="col s12 m6">
+				<div class="col s6 center">
+					<a class="waves-effect light-blue lighten-1 btn-large" href="MainAction.action">
+						<i class="material-icons right">settings_backup_restore</i>返回主页
+					</a>
+				</div>
+			</div>
+		</c:if>
+		<c:if test="${user.rank==1}">
+			<div class="row">
+				<div class="col s4 center">
+					<a class="waves-effect light-blue lighten-1 btn-large" href="AddPosts.jsp"> <i
+						class="material-icons right">playlist_add</i>发表帖子
+					</a>
+				</div>
+				<div class="col s4 center">
 					<a class="waves-effect light-blue lighten-1 btn-large"
 						href="admin_PgetUserList.action"> <i class="material-icons right">settings</i>设置版主
+					</a>
+				</div>
+				<div class="col s4 center">
+					<a class="waves-effect light-blue lighten-1 btn-large" href="MainAction.action">
+						<i class="material-icons right">settings_backup_restore</i>返回主页
 					</a>
 				</div>
 			</div>

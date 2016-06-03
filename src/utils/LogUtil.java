@@ -9,7 +9,7 @@ package utils;
  * @date 下午8:52:08
  */
 public class LogUtil {
-	public final static boolean isEnable = true;
+	public final static boolean isEnable = false;
 
 	/**
 	 * 打印输出
