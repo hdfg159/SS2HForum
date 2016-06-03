@@ -26,16 +26,20 @@
 							<p>时间：${post.postdate}</p>
 							<p>版块：${post.plate.platename}</p>
 						</div>
-						<c:if
-							test="${user.id==post.user.id||user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">
-							<div class="card-action">
+						<div class="card-action">
+							<c:if
+								test="${user.id!=post.user.id&&user.rank!=1&&(user.plateid!=nowppppp&&user.rank!=2)}">
+								<a class="waves-effect btn-flat"> </a>
+							</c:if>
+							<c:if
+								test="${user.id==post.user.id||user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">
 								<a href="post_deletePost.action?postid=${post.id}" class="waves-effect btn-flat">删除帖子</a>
 								<c:if test="${user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">
 									<a href="post_top.action?postid=${post.id}" class="waves-effect btn-flat "><c:if
 											test="${post.position==0}">置顶帖子</c:if> <c:if test="${post.position!=0}">取消置顶</c:if></a>
 								</c:if>
-							</div>
-						</c:if>
+							</c:if>
+						</div>
 					</div>
 				</div>
 			</c:forEach>
