@@ -32,18 +32,18 @@
 				</div>
 				<br>
 				<div class="row center">
-					<div class="col s12 m4 l2">
+					<div class="col s4">
 						<button class="btn waves-effect light-blue lighten-1 btn-large" type="submit"
 							name="action">
 							确定 <i class="material-icons right">send</i>
 						</button>
 					</div>
-					<div class="col s12 m4 l8">
+					<div class="col s4">
 						<a class="waves-effect light-blue lighten-1 btn-large" href="MainAction.action">返回首页
 							<i class="material-icons right">toc</i>
 						</a>
 					</div>
-					<div class="col s12 m4 l2">
+					<div class="col s4">
 						<button class="btn waves-effect light-blue lighten-1 btn-large" type="reset"
 							name="action">
 							重置 <i class="material-icons right">clear_all</i>

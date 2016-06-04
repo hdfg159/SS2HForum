@@ -32,8 +32,8 @@
 			</c:forEach>
 			<c:if test="${user.rank==1}">
 				<div class="col s12 center">
-					<a class="waves-effect waves-light btn-large light-blue lighten-1"><i
-						class="material-icons right">playlist_add</i>添加版块</a>
+					<a class="waves-effect waves-light btn-large light-blue lighten-1"
+						href="AddPlate.jsp"><i class="material-icons right">playlist_add</i>添加版块</a>
 				</div>
 			</c:if>
 		</div>

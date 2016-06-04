@@ -42,7 +42,7 @@
 					</div>
 					<div class="col s4">
 						<a class="waves-effect light-blue lighten-1 btn-large"
-							href="bbs_login.action?username=anonymous&pwd=anonymous">以游客身份登录<i
+							href="bbs_login.action?username=anonymous&pwd=anonymous">游客登录<i
 							class="material-icons right">perm_identity</i></a>
 					</div>
 					<div class="col s4">
