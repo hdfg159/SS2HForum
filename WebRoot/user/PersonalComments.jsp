@@ -21,7 +21,7 @@
 						<br>
 						<div class="divider"></div>
 						<br>
-						<div style="word-wrap: break-word;white-space: pre-wrap;">">${comment.content}</div>
+						<div style="word-wrap: break-word;white-space: pre-wrap;">${comment.content}</div>
 						<br>
 						<div class="right">
 							<a class="waves-effect  orange darken-4 btn"
