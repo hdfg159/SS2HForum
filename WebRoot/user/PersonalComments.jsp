@@ -10,7 +10,7 @@
 	<br>
 	<div class="container">
 		<div class="center hoverable">
-			<blockquote class="flow-text card-panel">${user.username}回帖列表</blockquote>
+			<blockquote class="grey-text flow-text card-panel">${user.username}回帖列表</blockquote>
 		</div>
 		<div class="row">
 			<c:forEach var="comment" items="${modcomments}">

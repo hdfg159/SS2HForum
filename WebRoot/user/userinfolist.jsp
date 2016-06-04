@@ -10,16 +10,26 @@
 	<br>
 	<div class="container">
 		<div class="center hoverable">
-			<blockquote class="flow-text card-panel">所有用户信息</blockquote>
+			<blockquote class="grey-text flow-text card-panel">所有用户信息</blockquote>
 		</div>
 		<div class="row">
 			<c:forEach var="user2" items="${userlist}">
 				<div class="col s12 m6">
 					<div class="card hoverable">
 						<div class="card-content">
-							<span class="card-title truncate">用户名：${user2.username}</span>
-							<p>ID：${user2.id }</p>
-							<p>密码：${user2.password }</p>
+							<span class="card-title truncate">用户：${user2.username}</span><i
+								class="activator material-icons right">more_vert</i>
+							<p class="grey-text">UserID:${user2.id }</p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4"><i class=" material-icons">loyalty</i>用户详细信息<i
+								class="material-icons right">close</i></span>
+							<p>
+								<i class=" material-icons">person_pin</i>用户ID:${user2.id }
+							</p>
+							<p>
+								<i class=" material-icons">vpn_key</i>用户密码:${user2.password}
+							</p>
 						</div>
 						<div class="card-action">
 							<c:if test="${user2.id!=user.id&&user2.username ne 'anonymous'}">

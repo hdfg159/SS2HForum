@@ -11,6 +11,7 @@
 <body>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
 	<nav class="light-blue lighten-1" role="navigation">
 		<div class="nav-wrapper container">
 			<a id="logo-container" href="#" class="brand-logo">SimpleForum</a>
@@ -18,6 +19,12 @@
 				<li><a href="login.jsp">登录</a></li>
 				<li><a href="register.jsp">注册</a></li>
 			</ul>
+			<ul id="nav-mobile" class="side-nav">
+				<li><a href="login.jsp">登录</a></li>
+				<li><a href="register.jsp">注册</a></li>
+			</ul>
+			<a href="#" data-activates="nav-mobile" class="button-collapse"><i
+				class="material-icons">menu</i></a>
 		</div>
 	</nav>
 </body>

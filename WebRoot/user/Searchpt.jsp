@@ -14,11 +14,11 @@
 	<div class="container">
 		<div class="row center card-panel hoverable">
 			<form action="SearchAction" method="post">
-				<div class="input-field col s9">
+				<div class="input-field col s8">
 					<i class="material-icons prefix">search</i> <input id="icon_telephone" type="text"
-						name="search" class="validate"> <label for="icon_telephone">请输入搜索的标题或内容关键字</label>
+						name="search" class="validate"> <label for="icon_telephone">输入搜索关键字</label>
 				</div>
-				<div class="input-field col s3">
+				<div class="input-field col s4">
 					<button class="btn-large waves-effect waves-light" type="submit" name="action">
 						确定 <i class="material-icons right">send</i>
 					</button>
