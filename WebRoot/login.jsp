@@ -47,9 +47,9 @@
 						</button>
 					</div>
 					<div class="col s4">
-						<a class="waves-effect light-blue lighten-1 btn-large"
-							href="bbs_login.action?username=anonymous&pwd=anonymous">游客登录<i
-							class="material-icons right">perm_identity</i></a>
+						<a class="waves-effect light-blue lighten-1 btn-large tooltipped"
+							href="bbs_login.action?username=anonymous&pwd=anonymous" data-position="bottom"
+							data-delay="200" data-tooltip="以匿名身份自由访问论坛">游客登录<i class="material-icons right">perm_identity</i></a>
 					</div>
 					<div class="col s4">
 						<button class="btn waves-effect light-blue lighten-1 btn-large" type="reset"

@@ -30,7 +30,8 @@
 		<div class="nav-wrapper light-blue lighten-1">
 			<a href="#!" class="brand-logo">SimpleForum</a>
 			<ul class="right hide-on-med-and-down">
-				<li><a href="#"> <c:if test="${user.head=='no'}">
+				<li><a class="tooltipped" data-position="bottom" data-delay="300"
+					data-tooltip="这是你的个人头像哦..."> <c:if test="${user.head=='no'}">
 							<img src="../upload/head/default.png" width="42px" height="42px"
 								class="circle responsive-img" align="middle">
 						</c:if> <c:if test="${user.head!='no'}">
