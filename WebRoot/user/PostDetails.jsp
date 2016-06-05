@@ -9,6 +9,19 @@
 	<%@include file="PostPlateHead.jsp"%>
 	<br>
 	<br>
+	<c:if test="${nowppppp!=NULL&&user.username ne 'anonymous'}">
+		<div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+			<a href="#edit" class="btn-floating btn-large red"> <i class="large material-icons">mode_edit</i>
+			</a>
+		</div>
+	</c:if>
+	<c:if test="${nowppppp!=NULL&&user.username eq 'anonymous'}">
+		<div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+			<a href="post_displayPosts.action?plateid=${nowppppp}"
+				class="btn-floating btn-large red"> <i class="large material-icons">call_missed</i>
+			</a>
+		</div>
+	</c:if>
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
@@ -31,6 +44,7 @@
 						<form class="col s12"
 							action="${pageContext.request.contextPath}/user/comment_addComment" method="post">
 							<div class="row">
+								<div id="edit" class="section scrollspy"></div>
 								<div class="input-field col s12">
 									<i class="material-icons prefix">mode_edit</i>
 									<textarea id="icon_prefix2" class="materialize-textarea" name="lcomment"></textarea>
@@ -57,13 +71,6 @@
 						</form>
 					</div>
 				</c:if>
-			</c:if>
-			<c:if test="${nowppppp!=NULL&&user.username eq 'anonymous'}">
-				<div class="input-field col s12 center ">
-					<a href="post_displayPosts.action?plateid=${nowppppp}"
-						class="btn waves-effect waves-light light-blue lighten-1"><i
-						class="material-icons right">settings_backup_restore</i>返回</a>
-				</div>
 			</c:if>
 			<div class="col s12">
 				<c:forEach var="comment" items="${Postcomments}">

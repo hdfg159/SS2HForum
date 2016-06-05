@@ -8,6 +8,16 @@
 	<%@include file="PostPlateHead.jsp"%>
 	<br>
 	<br>
+	<div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+		<c:if test="${user.username ne 'anonymous'}">
+			<a href="#edit" class="btn-floating btn-large red"> <i class="large material-icons">mode_edit</i>
+			</a>
+		</c:if>
+		<c:if test="${user.username eq 'anonymous'}">
+			<a href="MainAction.action" class="btn-floating btn-large red"> <i class="large material-icons">call_missed</i>
+			</a>
+		</c:if>
+	</div>
 	<div class="container">
 		<div class="center hoverable">
 			<blockquote class="grey-text flow-text card-panel">帖子列表</blockquote>
@@ -67,6 +77,7 @@
 		</div>
 		<c:if test="${user.rank!=1&&user.username ne 'anonymous'}">
 			<div class="row">
+				<div id="edit" class="section scrollspy"></div>
 				<div class="col s6 center">
 					<a class="waves-effect light-blue lighten-1 btn-large" href="AddPosts.jsp"> <i
 						class="material-icons right">playlist_add</i>发表帖子
@@ -81,6 +92,7 @@
 		</c:if>
 		<c:if test="${user.rank==1}">
 			<div class="row">
+				<div id="edit" class="section scrollspy"></div>
 				<div class="col s4 center">
 					<a class="waves-effect light-blue lighten-1 btn-large" href="AddPosts.jsp"> <i
 						class="material-icons right">playlist_add</i>发表帖子

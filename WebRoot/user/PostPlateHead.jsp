@@ -41,8 +41,9 @@
 				</a></li>
 				<li><a class="dropdown-button" href="#!" data-activates="dropdown1">${user.username}<i
 						class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a href="MainAction.action">首页</a></li>
-				<li><a href="Searchpt.jsp">搜索</a></li>
+				<li><a href="MainAction.action">论坛首页</a></li>
+				<li><a href="Searchpt.jsp" class="tooltipped" data-position="bottom"
+					data-delay="300" data-tooltip="可以搜索帖子标题和帖子内容">搜索</a></li>
 				<li><a href="personal_exitServer.action"> <c:if
 							test="${user.username ne 'anonymous'}">退出</c:if> <c:if
 							test="${user.username eq 'anonymous'}">注册/登录</c:if>
