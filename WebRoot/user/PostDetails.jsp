@@ -65,7 +65,7 @@
 							</div>
 							<div class="input-field col s6 center ">
 								<a href="post_displayPosts.action?plateid=${nowppppp}"
-									class="btn waves-effect waves-light light-blue lighten-1"><i
+									class="btn  waves-effect waves-light light-blue lighten-1"><i
 									class="material-icons right">settings_backup_restore</i>返回</a>
 							</div>
 						</form>
