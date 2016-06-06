@@ -13,7 +13,7 @@
 			<blockquote class="grey-text flow-text card-panel">${user.username}帖子列表</blockquote>
 		</div>
 		<div class="row">
-			<c:forEach var="post" items="${modposts}">
+			<c:forEach var="post" items="${user.userPosts}">
 				<div class="col s12 m6">
 					<div class="card hoverable">
 						<div class="card-content">

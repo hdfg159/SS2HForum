@@ -14,7 +14,8 @@
 			</a>
 		</c:if>
 		<c:if test="${user.username eq 'anonymous'}">
-			<a href="MainAction.action" class="btn-floating btn-large red"> <i class="large material-icons">call_missed</i>
+			<a href="MainAction.action" class="btn-floating btn-large red"> <i
+				class="large material-icons">call_missed</i>
 			</a>
 		</c:if>
 	</div>
@@ -58,7 +59,7 @@
 						</div>
 						<div class="card-action">
 							<c:if
-								test="${user.id!=post.user.id&&user.rank!=1&&(user.plateid!=nowppppp&&user.rank!=2)}">
+								test="${user.id!=post.user.id&&user.rank!=1&&user.plateid!=nowppppp&&user.rank!=2||user.id!=post.user.id&&user.rank!=1&&user.plateid!=nowppppp&&user.rank==2}">
 								<a class="waves-effect btn-flat truncate"
 									href="comment_postDetailComment.action?postid=${post.id}">点击标题查看帖子</a>
 							</c:if>
@@ -66,7 +67,7 @@
 								test="${user.id==post.user.id||user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">
 								<a href="post_deletePost.action?postid=${post.id}" class="waves-effect btn-flat">删除帖子</a>
 								<c:if test="${user.rank==1||(user.plateid==nowppppp&&user.rank==2)}">
-									<a href="post_top.action?postid=${post.id}" class="waves-effect btn-flat "><c:if
+									<a href="post_top.action?postid=${post.id}" class="waves-effect btn-flat"><c:if
 											test="${post.position==0}">置顶帖子</c:if> <c:if test="${post.position!=0}">取消置顶</c:if></a>
 								</c:if>
 							</c:if>
@@ -75,7 +76,7 @@
 				</div>
 			</c:forEach>
 		</div>
-		<c:if test="${user.rank!=1&&user.username ne 'anonymous'}">
+		<c:if test="${user.username ne 'anonymous'}">
 			<div class="row">
 				<div id="edit" class="section scrollspy"></div>
 				<div class="col s6 center">
@@ -84,26 +85,6 @@
 					</a>
 				</div>
 				<div class="col s6 center">
-					<a class="waves-effect light-blue lighten-1 btn-large" href="MainAction.action">
-						<i class="material-icons right">settings_backup_restore</i>返回主页
-					</a>
-				</div>
-			</div>
-		</c:if>
-		<c:if test="${user.rank==1}">
-			<div class="row">
-				<div id="edit" class="section scrollspy"></div>
-				<div class="col s4 center">
-					<a class="waves-effect light-blue lighten-1 btn-large" href="AddPosts.jsp"> <i
-						class="material-icons right">playlist_add</i>发表帖子
-					</a>
-				</div>
-				<div class="col s4 center">
-					<a class="waves-effect light-blue lighten-1 btn-large"
-						href="admin_PgetUserList.action"> <i class="material-icons right">settings</i>设置版主
-					</a>
-				</div>
-				<div class="col s4 center">
 					<a class="waves-effect light-blue lighten-1 btn-large" href="MainAction.action">
 						<i class="material-icons right">settings_backup_restore</i>返回主页
 					</a>

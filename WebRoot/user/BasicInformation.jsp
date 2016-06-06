@@ -73,19 +73,19 @@
 						<p>
 						<div class="input-field col s12">
 							<i class="material-icons prefix">phone</i> <input id="icon_telephone" type="tel"
-								name="phonenum" class="validate"> <label for="icon_telephone">请输入手机号码</label>
+								name="phonenum" class="validate" value="${user.phonenum}"> <label for="icon_telephone">请输入手机号码</label>
 						</div>
 						<br> <br>
 						<p>
 						<div class="input-field col s12">
 							<i class="material-icons prefix">perm_contact_calendar</i> <input id="QQ"
-								type="text" name="qq" class="validate"> <label for="QQ">请输入QQ</label>
+								type="text" name="qq" class="validate" value="${user.qq}"> <label for="QQ">请输入QQ</label>
 						</div>
 						<br> <br>
 						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i> <input id="email" type="email"
-								name="mail" class="validate"> <label for="email" data-error="wrong"
-								data-success="right">请输入Email</label>
+								name="mail" class="validate" value="${user.mail}"> <label for="email" data-error="wrong"
+								data-success="right" >请输入Email</label>
 						</div>
 						<div class="input-field col s12 center ">
 							<button class="btn-large waves-effect waves-light" type="submit" name="action">

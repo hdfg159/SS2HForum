@@ -24,7 +24,8 @@
 						<c:if test="${user.rank==1}">
 							<div class="card-action">
 								<a href="plate_deletePlate?plateid=${plate.id}">删除版块</a> <a
-									href="plate_entermodinfo.action?plateid=${plate.id}">修改信息</a>
+									href="plate_entermodinfo.action?plateid=${plate.id}">修改信息</a> <a
+									href="admin_PgetUserList.action?plateId=${plate.id}">设置版主 </a>
 							</div>
 						</c:if>
 					</div>

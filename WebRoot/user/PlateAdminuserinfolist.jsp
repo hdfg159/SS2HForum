@@ -34,9 +34,9 @@
 						<div class="card-action">
 							<c:if test="${user2.rank!=1&&user2.username ne 'anonymous'}">
 								<a href="admin_setPlateAdmin.action?id=${user2.id}"> <c:if
-										test="${user2.rank==2&&user2.plateid==nowppppp}">取消当前版块版主权限</c:if> <c:if
+										test="${user2.rank==2&&user2.plateid==plateIdAdmin}">取消当前版块版主权限</c:if> <c:if
 										test="${user2.rank==0}">设置为当前版主</c:if> <c:if
-										test="${user2.rank==2&&user2.plateid!=nowppppp}">
+										test="${user2.rank==2&&user2.plateid!=plateIdAdmin}">
 								取消其他版块版主权限
 							</c:if>
 								</a>
@@ -47,12 +47,6 @@
 					</div>
 				</div>
 			</c:forEach>
-		</div>
-		<div class="col s12 center">
-			<a class="waves-effect light-blue lighten-1 btn-large"
-				href="post_displayPosts.action?plateid=${nowppppp}"> <i
-				class="material-icons right">settings_backup_restore</i>返回帖子列表
-			</a>
 		</div>
 	</div>
 	<br>

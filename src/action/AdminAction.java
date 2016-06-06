@@ -16,7 +16,16 @@ public class AdminAction extends ActionSupport {
 
 	private String username;
 	private String password;
+	private int plateId;
 	private int id;
+
+	public int getPlateId() {
+		return plateId;
+	}
+
+	public void setPlateId(int plateId) {
+		this.plateId = plateId;
+	}
 
 	public int getId() {
 		return id;
@@ -49,8 +58,8 @@ public class AdminAction extends ActionSupport {
 	}
 
 	public String setPlateAdmin() throws Exception {
-		userService.plateAdmin(id,
-				(Integer) context.getSession().get("nowppppp"));
+		int plateid = (Integer) context.getSession().get("plateIdAdmin");
+		userService.plateAdmin(id, plateid);
 		refreshuserinfolist();
 		return "setplateadminsuccess";
 	}
@@ -83,6 +92,7 @@ public class AdminAction extends ActionSupport {
 	}
 
 	public String PgetUserList() throws Exception {
+		context.getSession().put("plateIdAdmin", plateId);
 		refreshuserinfolist();
 		return "setplateadminsuccess";
 	}

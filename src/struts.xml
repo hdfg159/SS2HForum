@@ -35,7 +35,7 @@
 			</result>
 			<result name="deletecommentsuccess" type="redirect">PersonalComments.jsp
 			</result>
-			<result name="updateinformationsuccess" type="redirect">MainAction
+			<result name="updateinformationsuccess" type="redirect">BasicInformation.jsp
 			</result>
 			<result name="modfail" type="redirect">BasicInformation.jsp
 			</result>

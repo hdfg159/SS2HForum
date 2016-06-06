@@ -133,12 +133,11 @@ public class PersonalAction extends ActionSupport {
 
 	public String deletePost() throws Exception {
 		postService.delete(postid);
-		context.getSession().put("modposts", refresh().getUserPosts());
-		return "deletepostsuccess";
+		return viewPosts();
 	}
 
 	public String viewPosts() throws Exception {
-		context.getSession().put("modposts", refresh().getUserPosts());
+		refresh();
 		return "deletepostsuccess";
 	}
 
@@ -167,12 +166,11 @@ public class PersonalAction extends ActionSupport {
 
 	public String deleteComment() throws Exception {
 		commentService.delete(commentid);
-		context.getSession().put("modcomments", refresh().getUserComments());
-		return "deletecommentsuccess";
+		return viewComments();
 	}
 
 	public String viewComments() throws Exception {
-		context.getSession().put("modcomments", refresh().getUserComments());
+		refresh();
 		return "deletecommentsuccess";
 	}
 
