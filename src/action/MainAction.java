@@ -1,7 +1,6 @@
 package action;
 
 import java.io.File;
-import java.util.List;
 
 import model.Usertable;
 
@@ -35,28 +34,23 @@ public class MainAction extends ActionSupport {
 		if (user == null) {
 			return INPUT;
 		} else {
-			RefleshHeadIcon(user, context);
-			List<?> plates = postPlateService.findAll();
-			context.getSession().put("PlateList", plates);
+			refleshHeadIcon(user, context);
+			context.getSession().put("PlateList", postPlateService.findAll());
 			return SUCCESS;
 		}
 	}
 
-	public void RefleshHeadIcon(Usertable user, ActionContext context) {
+	public void refleshHeadIcon(Usertable user, ActionContext context) {
 		File headicon = new File(ServletActionContext.getServletContext()
 				.getRealPath("upload") + "\\head\\" + user.getHead());
 		LogUtil.i(headicon.getAbsolutePath());
 		if (headicon.isDirectory()) {
 			userService.modHeadIcon(user.getId(), "no");
-			LogUtil.i("没有头像图片");
 		} else {
 			if (!headicon.exists()) {
 				userService.modHeadIcon(user.getId(), "no");
-				LogUtil.i("没有头像图片");
 			}
 		}
-		Usertable usernew = userService.check(user.getUsername(),
-				user.getPassword());
-		context.getSession().put("user", usernew);
+		context.getSession().put("user", userService.findById(user.getId()));
 	}
 }

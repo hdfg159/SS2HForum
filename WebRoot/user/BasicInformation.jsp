@@ -37,7 +37,8 @@
 						enctype="multipart/form-data">
 						<div class="file-field input-field">
 							<div class="btn ">
-								<span>File</span> <input type="file" name="headportrait">
+								<span>File</span> <input type="file"
+									accept="image/png,image/jpeg,image/bmp" name="headportrait">
 							</div>
 							<div class="file-path-wrapper">
 								<input class="file-path validate" type="text">
@@ -73,7 +74,8 @@
 						<p>
 						<div class="input-field col s12">
 							<i class="material-icons prefix">phone</i> <input id="icon_telephone" type="tel"
-								name="phonenum" class="validate" value="${user.phonenum}"> <label for="icon_telephone">请输入手机号码</label>
+								name="phonenum" class="validate" value="${user.phonenum}"> <label
+								for="icon_telephone">请输入手机号码</label>
 						</div>
 						<br> <br>
 						<p>
@@ -84,8 +86,8 @@
 						<br> <br>
 						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i> <input id="email" type="email"
-								name="mail" class="validate" value="${user.mail}"> <label for="email" data-error="wrong"
-								data-success="right" >请输入Email</label>
+								name="mail" class="validate" value="${user.mail}"> <label for="email"
+								data-error="wrong" data-success="right">请输入Email</label>
 						</div>
 						<div class="input-field col s12 center ">
 							<button class="btn-large waves-effect waves-light" type="submit" name="action">

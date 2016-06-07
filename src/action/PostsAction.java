@@ -94,8 +94,6 @@ public class PostsAction extends ActionSupport {
 		postt.setTitle(title);
 		postt.setUser(user);
 		postt.setPlate(postPlateService.findById(plid));
-		// postt.setPlateid(plid);
-		// postt.setUserid(user.getId());
 		postt.setPostdate(TimeUtils.getCurrentTimeInString());
 		postService.save(postt);
 		refreshPosts(plid);

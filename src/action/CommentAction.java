@@ -78,9 +78,6 @@ public class CommentAction extends ActionSupport {
 		comment.setDate(TimeUtils.getCurrentTimeInString());
 		Posts post = (Posts) context.getSession().get("PostDetail");
 		setPostid(post.getId());
-		// comment.setUserid(user.getId());
-		// comment.setPlateid((Integer) context.getSession().get("nowppppp"));
-		// comment.setPostid(post.getId());
 		comment.setUser(user);
 		comment.setPost(post);
 		comment.setPlate(postPlateService.findById((Integer) context
