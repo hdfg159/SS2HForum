@@ -11,8 +11,7 @@
 	<br>
 	<c:if test="${nowppppp!=NULL&&user.username ne 'anonymous'}">
 		<div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
-			<a href="#edit" class="btn-floating btn-large red"> <i
-				class="large material-icons">mode_edit</i>
+			<a href="#edit" class="btn-floating btn-large red"> <i class="large material-icons">mode_edit</i>
 			</a>
 		</div>
 	</c:if>
@@ -74,9 +73,9 @@
 				</c:if>
 			</c:if>
 			<div class="col s12">
-				<c:forEach var="comment" items="${Postcomments}">
+				<c:forEach var="comment" items="${Postcomments}" varStatus="floor">
 					<div class="card-panel hoverable">
-						<div class="left">${comment.user.username}</div>
+						<div class="left">[${floor.count}楼] ${comment.user.username}</div>
 						<div class="right">${comment.date}</div>
 						<br>
 						<div class="divider"></div>
