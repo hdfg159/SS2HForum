@@ -32,11 +32,11 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a class="tooltipped" data-position="bottom" data-delay="300"
 					data-tooltip="这是你的个人头像哦..."> <c:if test="${user.head=='no'}">
-							<img src="../upload/head/default.png" width="42px" height="42px"
-								class="circle responsive-img" align="middle">
+							<img src="../upload/head/default.png" width="48px" height="48px"
+								class="circle responsive-img" style="vertical-align:middle;">
 						</c:if> <c:if test="${user.head!='no'}">
-							<img src="../upload/head/${user.head}" width="42px" height="42px"
-								class="circle responsive-img" align="middle">
+							<img src="../upload/head/${user.head}" width="48px" height="48px"
+								class="circle responsive-img" style="vertical-align:middle;">
 						</c:if>
 				</a></li>
 				<li><a class="dropdown-button" href="#!" data-activates="dropdown1">${user.username}<i
@@ -51,11 +51,11 @@
 			</ul>
 			<ul id="nav-mobile" class="side-nav">
 				<li><a href="#"> <c:if test="${user.head=='no'}">
-							<img src="../upload/head/default.png" width="42px" height="42px"
-								class="circle responsive-img" align="middle">
+							<img src="../upload/head/default.png" width="48px" height="48px"
+								class="circle responsive-img" style="vertical-align:middle;">
 						</c:if> <c:if test="${user.head!='no'}">
-							<img src="../upload/head/${user.head}" width="42px" height="42px"
-								class="circle responsive-img" align="middle">
+							<img src="../upload/head/${user.head}" width="48px" height="48px"
+								class="circle responsive-img" style="vertical-align:middle;">
 						</c:if>
 				</a></li>
 				<c:if test="${user.username ne 'anonymous'}">

@@ -11,7 +11,8 @@
 	<br>
 	<c:if test="${nowppppp!=NULL&&user.username ne 'anonymous'}">
 		<div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
-			<a href="#edit" class="btn-floating btn-large red"> <i class="large material-icons">mode_edit</i>
+			<a href="#edit" class="btn-floating btn-large red"> <i
+				class="large material-icons">mode_edit</i>
 			</a>
 		</div>
 	</c:if>
@@ -48,7 +49,7 @@
 								<div class="input-field col s12">
 									<i class="material-icons prefix">mode_edit</i>
 									<textarea id="icon_prefix2" class="materialize-textarea" name="lcomment"></textarea>
-									<label for="icon_prefix2">请输入回帖内容</label>
+									<label for="icon_prefix2" data-error="wrong" data-success="right">请输入回帖内容</label>
 								</div>
 							</div>
 							<div class="col s12">
@@ -58,14 +59,14 @@
 								</blockquote>
 							</div>
 							<div class="input-field col s6 center ">
-								<button class="btn waves-effect waves-light light-blue lighten-1" type="submit"
-									name="action">
+								<button class="waves-effect waves-teal btn-large light-blue lighten-1"
+									type="submit" name="action">
 									回复 <i class="material-icons right">send</i>
 								</button>
 							</div>
 							<div class="input-field col s6 center ">
 								<a href="post_displayPosts.action?plateid=${nowppppp}"
-									class="btn  waves-effect waves-light light-blue lighten-1"><i
+									class="btn-large  waves-effect waves-light light-blue lighten-1"><i
 									class="material-icons right">settings_backup_restore</i>返回</a>
 							</div>
 						</form>

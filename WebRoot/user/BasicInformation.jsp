@@ -37,7 +37,7 @@
 						enctype="multipart/form-data">
 						<div class="file-field input-field">
 							<div class="btn ">
-								<span>File</span> <input type="file"
+								<span>选择</span> <input type="file"
 									accept="image/png,image/jpeg,image/bmp" name="headportrait">
 							</div>
 							<div class="file-path-wrapper">

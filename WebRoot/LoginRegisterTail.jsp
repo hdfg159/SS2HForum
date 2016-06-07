@@ -8,7 +8,8 @@
 			<div class="row">
 				<div class="col l6 s12">
 					<h5 class="white-text">论坛系统说明</h5>
-					<p class="grey-text text-lighten-4">此论坛系统命名为简易论坛，整合流行的三大JavaEE轻量级框架SS2H.</p>
+					<p class="grey-text text-lighten-4">此论坛系统命名为SimpleForum，整合流行的三大JavaEE轻量级框架SS2H。</p>
+					<p class="grey-text text-lighten-4">页面设计采用Google Material Design</p>
 					<p class="grey-text text-lighten-4">获取更好体验请注册登录</p>
 				</div>
 				<div class="col l3 s12">

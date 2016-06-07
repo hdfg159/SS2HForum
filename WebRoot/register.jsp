@@ -30,7 +30,9 @@
 				</div>
 				<br>
 				<div class="row center">
-					<h8 class="header col s12 orange darken-4 white-text"> <s:fielderror></s:fielderror></h8>
+					<h6 class="header col s12 orange darken-4 white-text">
+						<s:fielderror></s:fielderror>
+					</h6>
 				</div>
 				<br>
 				<div class="row center">
